@@ -1,69 +1,80 @@
-# React + TypeScript + Vite
+# 🎓 Future Skills - Frontend
+> Sistema de Gestão de Oficinas Educacionais - Interface Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📋 Sobre o Projeto
 
-Currently, two official plugins are available:
+O Future Skills é uma plataforma educacional voltada para oficinas de robótica, matemática, física, artes e tecnologia, com foco em aprendizagem prática para crianças e adolescentes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🔗 Links Importantes
+- [🎨 Mockups](https://preview-image-analysis-kzmqjdmogju1m08iefsa.vusercontent.net/)
+- [📋 Jira](https://unochapeco-team-fv4k68oc.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog)
+- [⚙️ Backend](link-do-repositorio-backend)
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 18** - Biblioteca para interfaces
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS** - Framework CSS utilitário
+- **Firebase** - Autenticação
+- **Vite** - Build tool e dev server
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Como Executar
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Pré-requisitos
+- Node.js 18+ 
+- npm ou yarn
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Instalação
+
+1. **Clone o repositório**
+   ```bash
+   git clone [url-do-repositorio]
+   cd projeto-capp-front
+   ```
+
+2. **Instale as dependências**
+   ```bash
+   npm install
+   ```
+
+3. **Configure as variáveis de ambiente**
+   
+   Crie um arquivo `.env` na raiz do projeto:
+   ```env
+   VITE_API_URL=http://localhost:3000
+   VITE_FIREBASE_API_KEY=sua_api_key
+   VITE_FIREBASE_AUTH_DOMAIN=seu_auth_domain
+   VITE_FIREBASE_PROJECT_ID=seu_project_id
+   ```
+
+4. **Execute o projeto**
+   ```bash
+   npm run dev
+   ```
+
+O projeto estará disponível em `http://localhost:5173`
+
+## 👥 Perfis de Usuário
+
+- **👨‍🏫 Professor** - Gerencia suas oficinas e alunos
+- **👩‍💼 Administrador** - Controle completo do sistema
+
+## 📦 Scripts Disponíveis
+
+```bash
+npm run dev          # Servidor de desenvolvimento
+npm run build        # Build para produção
+npm run preview      # Preview do build
+npm run lint         # Verificação de código
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔧 Configurações de Desenvolvimento
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Tailwind CSS
+O projeto utiliza Tailwind CSS para estilização. As configurações estão em `tailwind.config.js`.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### TypeScript
+Configurações de TypeScript em `tsconfig.json` e `tsconfig.node.json`.
+
+### ESLint
+Regras de linting configuradas para React e TypeScript.
