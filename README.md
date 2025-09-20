@@ -42,9 +42,6 @@ O Future Skills é uma plataforma educacional voltada para oficinas de robótica
    Crie um arquivo `.env` na raiz do projeto:
    ```env
    VITE_API_URL=http://localhost:3000
-   VITE_FIREBASE_API_KEY=sua_api_key
-   VITE_FIREBASE_AUTH_DOMAIN=seu_auth_domain
-   VITE_FIREBASE_PROJECT_ID=seu_project_id
    ```
 
 4. **Execute o projeto**
