@@ -8,7 +8,7 @@ O Future Skills é uma plataforma educacional voltada para oficinas de robótica
 ### 🔗 Links Importantes
 - [🎨 Mockups](https://preview-image-analysis-kzmqjdmogju1m08iefsa.vusercontent.net/)
 - [📋 Jira](https://unochapeco-team-fv4k68oc.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog)
-- [⚙️ Backend](link-do-repositorio-backend)
+- [⚙️ Backend](https://github.com/brunomffl/projeto-capp)
 
 ## 🛠️ Tecnologias Utilizadas
 
