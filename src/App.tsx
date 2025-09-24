@@ -1,11 +1,11 @@
 // import Login from "./components/Login"
-import AbaProfessores from "./components/painelAdministrativo/AbaProfessores"
+import Administrativo from "./pages/Administrativo"
 
 function App() {
   return (
     <div>
       {/* <Login /> */}
-      <AbaProfessores />
+      <Administrativo />
     </div>
   )
 }
