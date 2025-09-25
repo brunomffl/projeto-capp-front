@@ -1,6 +1,33 @@
+import { useState, type FormEvent } from "react"
 import { PiStudentBold } from "react-icons/pi"
+import { auth } from '../../firebase/firebase'; 
+import { signInWithEmailAndPassword } from 'firebase/auth'; 
+import { FirebaseError } from '@firebase/util';
+
 
 function Login() {
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+
+
+  const handleLogin = async (e: FormEvent) => {
+    e.preventDefault();
+
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+      console.log("Usuario logado com sucesso:", user);
+    } catch (error) {
+      console.error("Erro ao logar:", error);
+
+      if (error instanceof FirebaseError) {
+        alert("Erro ao fazer login: " + error.message);
+      } else {
+        alert("Erro desconhecido ao fazer login.");
+      }
+    }
+  }
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-indigo-50 to-indigo-100">
       <div className="flex flex-col items-center mb-6">
@@ -17,7 +44,7 @@ function Login() {
           Acesse sua conta para gerenciar as oficinas
         </p>
 
-        <form className="space-y-4">
+        <form className="space-y-4" onSubmit={handleLogin}>
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Tipo de Usuário
@@ -40,6 +67,8 @@ function Login() {
               type="email"
               placeholder="Digite seu email"
               required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
             />
           </div>
@@ -52,6 +81,8 @@ function Login() {
               type="password"
               placeholder="Digite sua senha"
               required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
             />
           </div>

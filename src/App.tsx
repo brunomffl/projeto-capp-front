@@ -1,11 +1,12 @@
 // import Login from "./components/Login"
-import Administrativo from "./pages/Administrativo"
+import Login from "./components/Login"
+// import Administrativo from "./pages/Administrativo"
 
 function App() {
   return (
     <div>
-      {/* <Login /> */}
-      <Administrativo />
+      <Login />
+      {/* <Administrativo /> */}
     </div>
   )
 }
