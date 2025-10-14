@@ -1,6 +1,6 @@
 import type { User } from 'firebase/auth';
 
-export type UserRole = 'administrador' | 'professor' | 'aluno' | null;
+export type UserRole = 'admin' | 'professor' | null;
 
 export interface AuthContextType {
   currentUser: User | null; 

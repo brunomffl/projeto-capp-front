@@ -31,7 +31,7 @@ export async function fetchUserRole(idToken: string): Promise<UserRole> {
 
         const data: RoleResponse = await response.json();
         
-        if (!data.papel || !['administrador', 'professor', 'aluno'].includes(data.papel)) {
+        if (!data.papel || !['admin', 'professor'].includes(data.papel)) {
             console.error("Papel inválido retornado pelo backend:", data.papel);
             return null;
         }

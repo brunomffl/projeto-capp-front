@@ -7,7 +7,7 @@ import { FirebaseError } from '@firebase/util';
 function Login() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-  const [userType, setUserType] = useState<'professor' | 'administrador' | 'aluno'>('professor')
+  const [userType, setUserType] = useState<'professor' | 'admin'>('professor')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -85,14 +85,13 @@ function Login() {
             </label>
             <select 
               value={userType}
-              onChange={(e) => setUserType(e.target.value as 'professor' | 'administrador' | 'aluno')}
+              onChange={(e) => setUserType(e.target.value as 'professor' | 'admin')}
               disabled={loading}
               className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent appearance-none bg-no-repeat bg-right pr-10 disabled:opacity-50 disabled:cursor-not-allowed" 
               style={{backgroundImage: 'url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDFMNiA2TDExIDEiIHN0cm9rZT0iIzZCNzI4MCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K")', backgroundPosition: 'right 12px center'}}
             >
               <option value="professor">Professor</option>
-              <option value="administrador">Administrador</option>
-              <option value="aluno">Aluno</option>
+              <option value="admin">Administrador</option>
             </select>
           </div>
 

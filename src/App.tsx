@@ -44,7 +44,7 @@ function App() {
   }
 
   switch (userRole) {
-    case 'administrador':
+    case 'admin':
       return <Administrativo />;
     case 'professor':
       return <ProfessorDashboard />;
